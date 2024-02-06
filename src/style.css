@@ -1,0 +1,14 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  text-align: justify;
+  padding: 20px;
+  background-color: black;
+}
+
+p {
+  background-color: white;
+}

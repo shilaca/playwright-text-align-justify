@@ -1,0 +1,24 @@
+{
+  "name": "vanilla-ts",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "pretest:pw": "npm run build && docker build -t playwright_text_align_justify .",
+    "test:pw": "docker run --rm -t -v `pwd`:/work playwright_text_align_justify bash -c 'npx playwright test'"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.16",
+    "express": "^4.18.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}
